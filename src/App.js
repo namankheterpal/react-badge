@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Badge from './Badge';
 
 function App() {
+  const [count, setCount]= useState(0);
+
+  useEffect(()=>{
+    setInterval(()=>setCount(s=>s+1),1000);
+  },[])
   return (
     <div className="App">
       <header className="App-header">
@@ -18,6 +24,7 @@ function App() {
         >
           Learn React
         </a>
+        <Badge count={count}/>
       </header>
     </div>
   );

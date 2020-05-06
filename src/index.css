@@ -11,3 +11,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.badge{
+  transition: transform 150ms ease-out;
+}
+.example-enter {
+  transform: scale(0.01);
+  transition-delay: 150ms;
+}
+
+.example-enter.example-enter-active {
+  transform: scale(1.5);
+}
+
+.example-leave {
+  transform: scale(1);
+}
+
+.example-leave.example-leave-active {
+  transform: scale(0.1);
+  transition: transform 150ms ease-out;
+}
